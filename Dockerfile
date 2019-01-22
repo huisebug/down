@@ -1,16 +1,14 @@
-#下载外网包
-
 FROM busybox
 WORKDIR /downsource
-ENV DOWNSOURCEURL "https://dl.k8s.io/v1.12.5/kubernetes-server-linux-amd64.tar.gz"
+# 包下载地址
+ENV DOWNSOURCEURL "https://dl.k8s.io/v1.13.2/kubernetes-server-linux-amd64.tar.gz"
 #RUN wget ${DOWNSOURCEURL}
 RUN echo ''' \
-copy /downsource/* /down/; \
+cp -rf /downsource/* /down/; \
 if [ $? -ne 0 ]; then \
     echo 'False'; \
 else  \
     echo 'Done'; \
 fi; \
 ''' > /downsource/down.sh && chmod +x /downsource/down.sh
-ENTRYPOINT [/downsource/down.sh]
-
+CMD /downsource/down.sh
