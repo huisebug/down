@@ -1,7 +1,7 @@
 FROM busybox
 WORKDIR /downsource
 # 包下载地址
-ENV DOWNSOURCEURL "https://dl.k8s.io/v1.13.2/kubernetes-server-linux-amd64.tar.gz"
+ENV DOWNSOURCEURL "https://dl.k8s.io/v1.11.7/kubernetes-server-linux-amd64.tar.gz"
 RUN wget ${DOWNSOURCEURL}
 RUN echo ''' \
 cp -rf /downsource/* /down/; \
