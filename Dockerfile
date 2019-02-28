@@ -8,7 +8,7 @@ cp -rf /downsource/* /down/; \
 if [ $? -ne 0 ]; then \
     echo 'False'; \
 else  \
-    echo 'Done'; \
+    echo '$DOWNSOURCEURL Done'; \
 fi; \
 ''' > /downsource/down.sh && chmod +x /downsource/down.sh
 CMD /downsource/down.sh
