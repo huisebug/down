@@ -2,5 +2,7 @@
 下载器
 运行如下命令
 ```shell
-docker rmi huisebug/down && docker run --rm -it -v /down:/down huisebug/down
+docker rmi huisebug/down 
+docker run -d --rm --name down huisebug/down sleep 100
+docker cp down:/opt/* .
 ```
