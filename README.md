@@ -4,5 +4,5 @@
 ```shell
 docker rmi huisebug/down 
 docker run -d --rm --name down huisebug/down sleep 100
-docker cp down:/opt/* .
+docker cp down:/opt .
 ```
