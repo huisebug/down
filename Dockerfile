@@ -1,7 +1,7 @@
 FROM busybox
 WORKDIR /opt
 # 包下载地址
-ENV DOWNSOURCEURL "https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.20.0/crictl-v1.20.0-linux-amd64.tar.gz"
+ENV DOWNSOURCEURL "https://raw.githubusercontent.com/bitnami/bitnami-docker-openldap/master/docker-compose.yml"
 RUN wget ${DOWNSOURCEURL}
 
 CMD sh
